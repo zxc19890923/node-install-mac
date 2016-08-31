@@ -8,3 +8,30 @@
 4. 然后就可以在终端 运行node
   node
   console.log("hello world");
+  
+  // 简单的例子
+  var http = require("http");
+  http.createServe(function(request, response) {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("hello");
+  }).listen(8000);
+  
+  // 路由控制
+  var http = require("http");
+  http.createServe(function(req, res) {
+    var path = req.url.toLowerCase();
+    switch(path) {
+      case '': 
+        res.writeServer(200, {"Content-Type": "text/plain"});
+        res.end("首页");
+        break;
+      case "about": 
+        res.writeServer(200, {"Content-Type": "text/plain"});
+        res.end("关于我们");
+        break;
+      default:
+        res.writeServer(404, {"Content-Type": "text/plain"});
+        res.end("无法找到网页");
+        break;
+    } 
+  }).listen(8000);

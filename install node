@@ -1,0 +1,10 @@
+1. 安装homebrew，登陆官网复制代码，在shell中运行即可。
+  如果遇到.git报错，那么百度，实用代码删除文件中得.git文件，重新安装即可。
+2. 安装node
+  brew install node就会下载安装，同时会安装 npm
+3. 实用node安装 express，grunt
+  sudo npm install -g grunt-cli
+  sudo npm install express
+4. 然后就可以在终端 运行node
+  node
+  console.log("hello world");
